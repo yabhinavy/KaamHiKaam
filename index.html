@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kaam Hi Kaam</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/afea27c44a.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      #map {
+        height: 800px;
+        width: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <nav id="navbar">
+        <img src="images/logo final.jpg" class="logo" />
+        <ul class="nav-links">
+          <li>
+            <a href="/listing.html" class="active" target="_blank">प्रोफ़ाइल</a>
+          </li>
+          <li><a href="#" class="active">T+</a></li>
+          <li>
+            <a href="/house.html" class="active" target="_blank">सूचनाएं</a>
+          </li>
+        </ul>
+        <a
+          href="http://localhost/house_rental/login.php"
+          class="register-btn"
+          target="_blank"
+          >अभी पंजीकरण करें</a
+        >
+        <i class="fa-solid fa-bars" onclick="togglebtn()"></i>
+      </nav>
+      <div class="container">
+        <h1>चल रहे निर्माण देखें...</h1>
+        <div class="search-bar">
+          <form>
+            <div class="location-input">
+              <label for="text">स्थान</label>
+              <input type="text" placeholder="आप कहाँ रहते हैं" id="text" />
+            </div>
+
+            <button type="submit"><img src="images/search.png" /></button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2 class="sub-title">काम के लिए यहां देखें</h2>
+      <div id="map">
+        <script>
+          function initMap() {
+            var options = {
+              zoom: 08,
+              center: { lat: 28.4744, lng: -77.504 },
+            };
+            var map = new google.maps.Map(
+              document.getElementById("map"),
+              options
+            );
+          }
+        </script>
+        <div>
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCe-ootgZVzcdFvtyfNcfxGdBCMpJQ2I78&callback=initMap&v=weekly"></script>
+        </div>
+      </div>
+      <h2 class="sub-title">सबसे विकसित शहर</h2>
+      <div class="trending">
+        <div>
+          <img src="images/Bangalore.jpg" width="536" height="592" />
+          <h3>बैंगलोर</h3>
+        </div>
+        <div>
+          <img src="images/mumbai.jpg" width="536" height="592" />
+          <h3>मुंबई</h3>
+        </div>
+        <div>
+          <img src="images/kolkata.jpg" width="536" height="592" />
+          <h3>कोलकाता</h3>
+        </div>
+        <div>
+          <img src="images/new-delhi.png" />
+          <h3>New Delhi</h3>
+        </div>
+      </div>
+      <div class="cta">
+        <h3>नए<br />काम सीखें</h3>
+        <p>हमारे माध्यम से कई विशिष्ट कार्य सीखें।<br />वह भी मुफ्त में</p>
+        <a href="#" class="cta-btn">और जानें</a>
+      </div>
+
+      <h2 class="sub-title">मजदूरों की कहानियां</h2>
+      <div class="stories">
+        <div>
+          <img src="images/Labour10.jpg" />
+          <p>सबका साथ सबका विकास</p>
+        </div>
+        <div>
+          <img src="images/labour5.jpg" />
+          <p>महिला सशक्तिकरण</p>
+        </div>
+        <div>
+          <img src="images/labour4.jpg" />
+          <p>अब उम्र कोई बाधा नहीं</p>
+        </div>
+      </div>
+      <a href="#" class="start-btn">आज ही काम ढूँढे</a>
+
+      <div class="about-msg">
+        <h2>हमारे बारे में</h2>
+        <p>
+          हम मजदूरों और ठेकेदारों को उनके संबंधित कार्यों में आसानी देना चाहते
+          हैं। हम चाहते हैं कि बिना किसी बिचौलियों की मदद के सीधे मजदूरों की
+          भर्ती की जाए।
+        </p>
+      </div>
+      <div class="footer">
+        <a
+          href="https://www.facebook.com/profile.php?id=100014426199708"
+          target="_blank"
+          ><i class="fa-brands fa-facebook-f"></i
+        ></a>
+        <a
+          href="https://www.youtube.com/channel/UC06sFA3dp5IrwE9OHDDDSag"
+          target="_blank"
+          ><i class="fa-brands fa-youtube"></i
+        ></a>
+        <a href="https://twitter.com/RitikKu17456993" target="_blank"
+          ><i class="fa-brands fa-twitter"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/ritik-2002/" target="_blank"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a href="https://www.instagram.com/riti_k2002/?hl=en" target="_blank"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <hr />
+        <p>Copyright &copy; 2022, ITS GROUP OF EDUCATION</p>
+      </div>
+    </div>
+    <script>
+      var navBar = document.getElementById("navbar");
+
+      function togglebtn() {
+        navBar.classList.toggle("hidemenu");
+      }
+    </script>
+  </body>
+</html>
